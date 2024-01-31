@@ -1,0 +1,15 @@
+a=[2,5,5,3,2,3,8,2,2,3,1,1,10,10,7]
+b=[]
+d={}
+count=1
+for i in range(0,len(a)):
+    for j in range(i+1,len(a)):
+        if(a[i]==a[j] and a[i] not in b):
+            count+=1
+            d[a[i]]=count
+    c=count
+    if(c==1 and a[i] not in b):
+        d[a[i]]=1
+    b.append(a[i])
+    count=1
+print(d)
